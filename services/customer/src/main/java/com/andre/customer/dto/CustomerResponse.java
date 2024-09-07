@@ -1,4 +1,15 @@
 package com.andre.customer.dto;
 
-public record CustomerResponse() {
+import com.andre.customer.customer.Address;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+
+public record CustomerResponse(
+
+        String id,
+        String firstname,
+        String lastname,
+        String email,
+        Address address
+) {
 }
