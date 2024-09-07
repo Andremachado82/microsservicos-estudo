@@ -1,4 +1,11 @@
 package com.andre.customer.exception;
 
-public class CustomerNotFoundException extends X {
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(callSuper = true)
+@Data
+public class CustomerNotFoundException extends RuntimeException {
+
+    private final String msg;
 }
