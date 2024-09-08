@@ -1,6 +1,5 @@
 package com.andre.customer.mapper;
 
-import com.andre.customer.customer.Address;
 import com.andre.customer.customer.Customer;
 import com.andre.customer.dto.CustomerRequest;
 import com.andre.customer.dto.CustomerResponse;
@@ -15,7 +14,7 @@ public class CustomerMapper {
             return null;
         }
         var customer = Customer.builder()
-                .id(null)
+                .id(request.id())
                 .firstname(request.firstname())
                 .lastname(request.lastname())
                 .email(request.email())

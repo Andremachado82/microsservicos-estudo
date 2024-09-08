@@ -1,0 +1,30 @@
+meta {
+  name: Create Order
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8222/api/v1/orders
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "reference": "MS-20241201",
+    "amount": 94.97,
+    "paymentMethod": "CREDIT_CARD",
+    "customerId": "66de0266db81a33aef090358",
+    "products": [
+      {
+        "productId": 1001,
+        "quantity": 2
+      },
+      {
+        "productId": 1051,
+        "quantity": 1
+      }
+    ]
+  }
+}
